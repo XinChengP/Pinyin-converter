@@ -271,7 +271,6 @@ Pinyin-converter/
 │   └── ...               # 其他拼音数据源
 ├── docs/                  # 🌐 GitHub Pages 部署文件
 ├── demo.html              # 🎯 在线演示页面
-├── test-*.html            # 🧪 测试页面
 ├── package.json           # 📋 项目配置
 ├── tsconfig.json          # ⚙️ TypeScript 配置
 └── rollup.config.js       # 🛠️ 构建配置
@@ -283,20 +282,15 @@ Pinyin-converter/
 打开 [`demo.html`](demo.html) 即可体验完整功能！
 
 ✨ **特色功能**：
-- 🎯 **智能编辑模式** - 支持多音字选择和声调调整
+- 🎯 **智能转换** - 支持多音字识别和声调调整
 - 🔍 **多音字高亮** - 自动识别并标注多音字
 - 🎵 **实时转换** - 输入即转换，无需等待
-- � **响应式设计** - 完美适配手机和电脑
+- 📱 **响应式设计** - 完美适配手机和电脑
 
-### 🧪 测试页面
-- [`test-editor.html`](test-editor.html) - 编辑模式测试
-- [`test-tone-position.html`](test-tone-position.html) - 声调位置测试
-- [`test-github-pages.html`](test-github-pages.html) - GitHub Pages 兼容性测试
-
-### � 在线访问
+### 🌍 在线访问
 项目已配置 GitHub Pages，可以直接在线访问：
 ```
-https://[your-username].github.io/Pinyin-converter/
+https://xinchengp.github.io/Pinyin-converter/
 ```
 
 ## 📄 数据来源
@@ -340,8 +334,7 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 ## 📞 联系方式
 
 - 📧 **Issues**: [GitHub Issues](https://github.com/XinChengP/Pinyin-converter/issues)
-- 💬 **讨论**: [GitHub Discussions](https://github.com/XinChengP/Pinyin-converter/discussions)
-- ⭐ **支持**: 给项目点个 Star 吧！
+- ⭐ **支持**: 如果这个项目对你有帮助，请给我们一个 Star！
 
 ---
 
