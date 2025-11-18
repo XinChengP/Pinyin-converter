@@ -45,6 +45,11 @@ jobs:
         run: |
           echo "Copying distribution files to docs directory..."
           cp -r dist/* docs/dist/ || true
+          
+      - name: Copy pinyin data files to docs
+        run: |
+          echo "Copying pinyin data files to docs directory..."
+          cp -r pinyin-data/* docs/pinyin-data/ || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

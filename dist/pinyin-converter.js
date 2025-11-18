@@ -62,7 +62,7 @@
         async loadMandarinData() {
             try {
                 // 在浏览器环境中使用fetch，在Node.js环境中使用fs
-                const mandarinData = await this.loadTextFile('../pinyin-data/kMandarin.txt');
+                const mandarinData = await this.loadTextFile('./pinyin-data/kMandarin.txt');
                 this.parseMandarinData(mandarinData);
             }
             catch (error) {
@@ -74,7 +74,7 @@
          */
         async loadPinyinData() {
             try {
-                const pinyinData = await this.loadTextFile('../pinyin-data/pinyin.txt');
+                const pinyinData = await this.loadTextFile('./pinyin-data/pinyin.txt');
                 this.parsePinyinData(pinyinData);
             }
             catch (error) {

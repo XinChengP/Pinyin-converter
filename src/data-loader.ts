@@ -63,7 +63,7 @@ export class PinyinDataLoader {
   private async loadMandarinData(): Promise<void> {
     try {
       // 在浏览器环境中使用fetch，在Node.js环境中使用fs
-      const mandarinData = await this.loadTextFile('../pinyin-data/kMandarin.txt');
+      const mandarinData = await this.loadTextFile('./pinyin-data/kMandarin.txt');
       this.parseMandarinData(mandarinData);
     } catch (error) {
       console.warn('无法加载kMandarin数据，将使用pinyin.txt作为主要数据源');
@@ -75,7 +75,7 @@ export class PinyinDataLoader {
    */
   private async loadPinyinData(): Promise<void> {
     try {
-      const pinyinData = await this.loadTextFile('../pinyin-data/pinyin.txt');
+      const pinyinData = await this.loadTextFile('./pinyin-data/pinyin.txt');
       this.parsePinyinData(pinyinData);
     } catch (error) {
       console.error('无法加载pinyin数据:', error);
