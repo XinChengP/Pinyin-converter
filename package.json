@@ -12,10 +12,10 @@
   ],
   "scripts": {
     "build": "npm run build:umd && npm run build:esm && npm run build:types",
-    "build:umd": "rollup -c rollup.config.js",
+    "build:umd": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "build:esm": "tsc --module es2015 --outDir dist/esm",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
-    "dev": "rollup -c rollup.config.js --watch",
+    "dev": "rollup -c rollup.config.js --watch --bundleConfigAsCjs",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
     "clean": "rimraf dist",
