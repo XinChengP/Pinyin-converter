@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
@@ -33,6 +33,18 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Verify build output
+        run: |
+          echo "Checking dist directory..."
+          ls -la dist/
+          echo "Checking docs directory..."
+          ls -la docs/
+
+      - name: Copy dist files to docs
+        run: |
+          echo "Copying distribution files to docs directory..."
+          cp -r dist/* docs/dist/ || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
