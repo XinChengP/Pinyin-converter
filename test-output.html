@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试输出</title>
+    <script src="dist/pinyin-converter.min.js"></script>
+</head>
+<body>
+    <h1>测试"华风夏韵，洛水天依"的拼音输出</h1>
+    <div id="result"></div>
+    
+    <script>
+        async function testOutput() {
+            const converter = await PinyinConverter.getPinyinConverter();
+            
+            const text = '华风夏韵，洛水天依';
+            
+            // 数字声调
+            const resultNumber = converter.convert(text, {
+                toneStyle: 'number',
+                separator: '-'
+            });
+            
+            // 符号声调
+            const resultMark = converter.convert(text, {
+                toneStyle: 'mark',
+                separator: '-'
+            });
+            
+            document.getElementById('result').innerHTML = `
+                <p><strong>输入文本:</strong> 华风夏韵，洛水天依</p>
+                <p><strong>数字声调输出:</strong> ${resultNumber.map(item => item.pinyin[0]).join('-')}</p>
+                <p><strong>符号声调输出:</strong> ${resultMark.map(item => item.pinyin[0]).join('-')}</p>
+            `;
+            
+            console.log('数字声调结果:', resultNumber);
+        }
+        
+        testOutput();
+    </script>
+</body>
+</html>

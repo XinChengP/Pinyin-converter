@@ -1,0 +1,19 @@
+# GitHub Pages 配置
+theme: jekyll-theme-minimal
+name: 拼音转换器
+description: 功能完整的汉字拼音转换工具，支持多音字识别、声调转换、编辑模式等高级功能
+show_downloads: true
+logo: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
+repository: your-username/pinyin-converter
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+exclude:
+  - node_modules/
+  - src/
+  - rollup.config.js
+  - tsconfig.json
+  - package.json
+  - package-lock.json
+  - .gitignore
+  - .github/

@@ -1,0 +1,68 @@
+{
+  "name": "pinyin-converter",
+  "version": "1.0.0",
+  "description": "功能完整的汉字拼音转换器，支持多音字、声调转换等高级功能",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "pinyin-data"
+  ],
+  "scripts": {
+    "build": "npm run build:umd && npm run build:esm && npm run build:types",
+    "build:umd": "rollup -c rollup.config.js",
+    "build:esm": "tsc --module es2015 --outDir dist/esm",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "dev": "rollup -c rollup.config.js --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "pinyin",
+    "chinese",
+    "converter",
+    "typescript",
+    "hanzi",
+    "拼音",
+    "汉字",
+    "转换器"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XinChengP/pinyin-converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XinChengP/pinyin-converter/issues"
+  },
+  "homepage": "https://github.com/XinChengP/pinyin-converter#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "tslib": "^2.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
