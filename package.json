@@ -1,6 +1,7 @@
 {
   "name": "pinyin-converter",
   "version": "1.0.0",
+  "type": "module",
   "description": "功能完整的汉字拼音转换器，支持多音字、声调转换等高级功能",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
